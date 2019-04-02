@@ -15,6 +15,10 @@ namespace think;
 
 // 加载基础文件
 require __DIR__ . '/../thinkphp/base.php';
+//记录开始时间
+defined('RUNTIME') or define('RUNTIME', microtime(true));
+//记录日志id
+define('LOGGERID',md5(date('YmdHis').uniqid()));
 
 // 支持事先使用静态方法设置Request对象和Config对象
 
